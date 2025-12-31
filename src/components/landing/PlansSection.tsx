@@ -93,7 +93,7 @@ const PlansSection = () => {
             </div>
 
             {/* Premium Plan */}
-            <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-4 sm:p-5 shadow-card border-2 border-primary overflow-hidden flex-1">
+            <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-4 sm:p-5 shadow-card border-2 border-primary overflow-hidden flex-1 mt-4">
               {/* Decorative glow */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
               
