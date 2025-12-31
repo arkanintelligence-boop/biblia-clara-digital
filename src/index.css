@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 30 15% 20%;
+
+    --card: 40 40% 97%;
+    --card-foreground: 30 15% 20%;
+
+    --popover: 40 40% 97%;
+    --popover-foreground: 30 15% 20%;
+
+    --primary: 43 55% 55%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 40 30% 94%;
+    --secondary-foreground: 30 15% 25%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 43 60% 50%;
+    --accent-foreground: 40 33% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 43 55% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gold: 43 55% 55%;
+    --gold-light: 43 60% 70%;
+    --gold-dark: 43 50% 40%;
+    --cream: 40 33% 98%;
+    --cream-dark: 40 30% 94%;
+    --warm-brown: 30 15% 20%;
+    --warm-brown-light: 30 10% 45%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 55% 55%), hsl(43 60% 65%));
+    --gradient-cream: linear-gradient(180deg, hsl(40 33% 98%), hsl(40 30% 94%));
+    --gradient-hero: linear-gradient(180deg, hsl(40 40% 96%) 0%, hsl(40 33% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(43 55% 55% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(30 15% 20% / 0.1);
+    --shadow-glow: 0 0 40px hsl(43 60% 70% / 0.3);
+
+    /* Fonts */
+    --font-serif: 'Poppins', system-ui, sans-serif;
+    --font-sans: 'Poppins', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 30 15% 10%;
+    --foreground: 40 33% 95%;
+    --card: 30 15% 12%;
+    --card-foreground: 40 33% 95%;
+    --popover: 30 15% 12%;
+    --popover-foreground: 40 33% 95%;
+    --primary: 43 55% 55%;
+    --primary-foreground: 30 15% 10%;
+    --secondary: 30 15% 18%;
+    --secondary-foreground: 40 33% 95%;
+    --muted: 30 15% 18%;
+    --muted-foreground: 40 20% 65%;
+    --accent: 43 60% 50%;
+    --accent-foreground: 30 15% 10%;
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 43 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+}
