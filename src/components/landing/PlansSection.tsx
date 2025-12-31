@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star, Gift, Sparkles, Crown } from "lucide-react";
+import { Star, Gift, Sparkles, Crown } from "lucide-react";
 import { useState } from "react";
 import {
   Dialog,
@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import CountdownBar from "./CountdownBar";
 
 const PlansSection = () => {
   const [showUpsellModal, setShowUpsellModal] = useState(false);
@@ -44,6 +45,7 @@ const PlansSection = () => {
 
   return (
     <>
+      <CountdownBar />
       <section id="plans-section" className="py-12 bg-background scroll-mt-4">
         <div className="container mx-auto px-5">
           {/* Header */}
@@ -58,7 +60,7 @@ const PlansSection = () => {
           </div>
 
           {/* Plans Grid */}
-          <div className="flex flex-col gap-4 max-w-sm mx-auto lg:flex-row lg:max-w-3xl lg:gap-6">
+          <div className="flex flex-col gap-6 max-w-sm mx-auto lg:flex-row lg:max-w-3xl lg:gap-6">
             {/* Basic Plan - First */}
             <div className="bg-card rounded-2xl p-4 sm:p-5 shadow-card border border-border/50 flex-1">
               <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">
@@ -92,53 +94,55 @@ const PlansSection = () => {
               </Button>
             </div>
 
-            {/* Premium Plan */}
-            <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-4 sm:p-5 shadow-card border-2 border-primary overflow-hidden flex-1 mt-4">
-              {/* Decorative glow */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
-              
-              {/* Badge */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+            {/* Premium Plan - Wrapper for badge visibility */}
+            <div className="relative flex-1 pt-3">
+              {/* Badge - Outside the card for visibility */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
                 <div className="bg-gradient-gold text-primary-foreground px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-soft whitespace-nowrap">
                   <Crown className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   Mais Escolhido
                 </div>
               </div>
+              
+              <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-4 sm:p-5 pt-6 shadow-card border-2 border-primary overflow-hidden">
+                {/* Decorative glow */}
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
 
-              <div className="relative">
-                <div className="flex items-center gap-2 mb-1 mt-3">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary fill-primary" />
-                  <h3 className="text-base sm:text-lg font-bold text-foreground">
-                    Plano Premium
-                  </h3>
-                </div>
-                <p className="text-xs text-muted-foreground mb-3">O acervo completo para você</p>
-                
-                {/* Price */}
-                <div className="mb-4 p-2.5 sm:p-3 bg-primary/10 rounded-xl border border-primary/20">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-xs text-muted-foreground">R$</span>
-                    <span className="text-2xl sm:text-3xl font-bold text-gradient-gold">27</span>
-                    <span className="text-base sm:text-lg font-bold text-gradient-gold">,90</span>
+                <div className="relative">
+                  <div className="flex items-center gap-2 mb-1 mt-2">
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary fill-primary" />
+                    <h3 className="text-base sm:text-lg font-bold text-foreground">
+                      Plano Premium
+                    </h3>
                   </div>
-                  <p className="text-xs text-muted-foreground">Acesso vitalício</p>
-                </div>
-                
-                <ul className="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5">
-                  {premiumFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-xs sm:text-sm">{feature.emoji}</span>
-                      </div>
-                      <span className="text-xs sm:text-sm text-foreground font-medium">{feature.text}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <p className="text-xs text-muted-foreground mb-3">O acervo completo para você</p>
+                  
+                  {/* Price */}
+                  <div className="mb-4 p-2.5 sm:p-3 bg-primary/10 rounded-xl border border-primary/20">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-xs text-muted-foreground">R$</span>
+                      <span className="text-2xl sm:text-3xl font-bold text-gradient-gold">27</span>
+                      <span className="text-base sm:text-lg font-bold text-gradient-gold">,90</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Acesso vitalício</p>
+                  </div>
+                  
+                  <ul className="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5">
+                    {premiumFeatures.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs sm:text-sm">{feature.emoji}</span>
+                        </div>
+                        <span className="text-xs sm:text-sm text-foreground font-medium">{feature.text}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                <Button variant="cta" size="default" className="w-full text-xs sm:text-sm shadow-soft">
-                  <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
-                  Escolher Premium
-                </Button>
+                  <Button variant="cta" size="default" className="w-full text-xs sm:text-sm shadow-soft">
+                    <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
+                    Escolher Premium
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
