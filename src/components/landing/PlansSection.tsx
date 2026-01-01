@@ -141,8 +141,8 @@ const PlansSection = () => {
                   <ul className="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5">
                     {premiumFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                          <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary-foreground" strokeWidth={3} />
                         </div>
                         <span className="text-xs sm:text-sm text-foreground font-medium">{feature}</span>
                       </li>
