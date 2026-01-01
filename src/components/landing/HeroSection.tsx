@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Check, Clock } from "lucide-react";
-import heroBible from "@/assets/hero-bible.jpg";
 
 const HeroSection = () => {
   const benefits = [
@@ -18,16 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[100svh] bg-gradient-hero overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroBible}
-          alt="Kit Bíblico Completo - Material ilustrado para estudo bíblico"
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy" />
-      </div>
+    <section className="relative min-h-[100svh] bg-navy overflow-hidden">
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-5 py-12 flex flex-col items-center text-center justify-center min-h-[100svh]">
