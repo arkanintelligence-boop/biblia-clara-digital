@@ -23,18 +23,21 @@ const PlansSection = () => {
   ];
 
   const premiumFeatures = [
-    { text: "Tudo do Plano Básico", emoji: "✅" },
-    { text: "7 Sacramentos em Mapas Mentais", emoji: "⛪" },
-    { text: "Livro do Advento", emoji: "📕" },
-    { text: "60 Dinâmicas Bíblicas", emoji: "🎯" },
-    { text: "O Velho Testamento – Mapa Mental Ilustrado", emoji: "📚" },
-    { text: "O Novo Testamento – Mapa Mental Ilustrado", emoji: "📖" },
-    { text: "Discípulos de Jesus – Mapa Mental Completo", emoji: "👥" },
-    { text: "Personagens da Bíblia – Kit Completo", emoji: "🧑‍🤝‍🧑" },
-    { text: "Bônus: Dinâmicas Bíblicas", emoji: "🎁" },
-    { text: "Bônus: Gincana Bíblica", emoji: "🎁" },
-    { text: "Bônus: Quiz Bíblico", emoji: "🎁" },
-    { text: "Bônus: As Parábolas de JESUS Explicadas", emoji: "🎁" },
+    "Tudo do Plano Básico",
+    "7 Sacramentos em Mapas Mentais",
+    "Livro do Advento",
+    "60 Dinâmicas Bíblicas",
+    "O Velho Testamento – Mapa Mental Ilustrado",
+    "O Novo Testamento – Mapa Mental Ilustrado",
+    "Discípulos de Jesus – Mapa Mental Completo",
+    "Personagens da Bíblia – Kit Completo",
+  ];
+
+  const premiumBonuses = [
+    "Bônus: Dinâmicas Bíblicas",
+    "Bônus: Gincana Bíblica",
+    "Bônus: Quiz Bíblico",
+    "Bônus: As Parábolas de JESUS Explicadas",
   ];
 
   const handleBasicClick = () => {
@@ -139,9 +142,17 @@ const PlansSection = () => {
                     {premiumFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <span className="text-xs sm:text-sm">{feature.emoji}</span>
+                          <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
                         </div>
-                        <span className="text-xs sm:text-sm text-foreground font-medium">{feature.text}</span>
+                        <span className="text-xs sm:text-sm text-foreground font-medium">{feature}</span>
+                      </li>
+                    ))}
+                    {premiumBonuses.map((bonus, index) => (
+                      <li key={`bonus-${index}`} className="flex items-start gap-2">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs sm:text-sm">🎁</span>
+                        </div>
+                        <span className="text-xs sm:text-sm text-foreground font-medium">{bonus}</span>
                       </li>
                     ))}
                   </ul>
