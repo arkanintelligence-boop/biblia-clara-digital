@@ -57,108 +57,108 @@ const PlansSection = () => {
   return (
     <>
       <CountdownBar />
-      <section id="plans-section" className="py-12 bg-background scroll-mt-4">
+      <section id="plans-section" className="py-16 bg-background scroll-mt-4">
         <div className="container mx-auto px-5">
           {/* Header */}
-          <div className="text-center mb-8">
-            <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary font-semibold px-3 py-1.5 rounded-full text-xs mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-5">
+              <Sparkles className="w-4 h-4" />
               Escolha Seu Plano
             </span>
-            <h2 className="text-xl font-bold text-foreground mb-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
               O que você <span className="text-gradient-gold">recebe</span>
             </h2>
           </div>
 
           {/* Plans Grid */}
-          <div className="flex flex-col gap-6 max-w-sm mx-auto lg:flex-row lg:max-w-3xl lg:gap-6">
+          <div className="flex flex-col gap-8 max-w-md mx-auto lg:flex-row lg:max-w-4xl lg:gap-8">
             {/* Basic Plan - First */}
-            <div className="bg-card rounded-2xl p-4 sm:p-5 shadow-card border border-border/50 flex-1">
-              <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">
+            <div className="bg-card rounded-2xl p-5 sm:p-6 shadow-card border border-border/50 flex-1">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
                 Plano Básico
               </h3>
-              <p className="text-xs text-muted-foreground mb-3">Para começar sua jornada</p>
+              <p className="text-sm text-muted-foreground mb-4">Para começar sua jornada</p>
               
               {/* Price */}
-              <div className="mb-4 p-2.5 sm:p-3 bg-secondary rounded-xl">
+              <div className="mb-5 p-3 sm:p-4 bg-secondary rounded-xl">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-xs text-muted-foreground">R$</span>
-                  <span className="text-xl sm:text-2xl font-bold text-foreground">10</span>
-                  <span className="text-base sm:text-lg font-bold text-foreground">,00</span>
+                  <span className="text-sm text-muted-foreground">R$</span>
+                  <span className="text-2xl sm:text-3xl font-bold text-foreground">10</span>
+                  <span className="text-lg sm:text-xl font-bold text-foreground">,00</span>
                 </div>
-                <p className="text-xs text-muted-foreground">Acesso vitalício</p>
+                <p className="text-sm text-muted-foreground">Acesso vitalício</p>
               </div>
               
-              <ul className="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5">
+              <ul className="space-y-3 mb-5 sm:mb-6">
                 {basicFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+                  <li key={index} className="flex items-start gap-2.5">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
                     </div>
-                    <span className="text-xs sm:text-sm text-foreground">{feature}</span>
+                    <span className="text-sm sm:text-base text-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <Button variant="ctaOutline" size="default" className="w-full text-xs sm:text-sm" onClick={handleBasicClick}>
+              <Button variant="ctaOutline" size="lg" className="w-full text-sm sm:text-base" onClick={handleBasicClick}>
                 Escolher Básico
               </Button>
             </div>
 
             {/* Premium Plan - Wrapper for badge visibility */}
-            <div className="relative flex-1 pt-3">
+            <div className="relative flex-1 pt-4">
               {/* Badge - Outside the card for visibility */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
-                <div className="bg-gradient-gold text-primary-foreground px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-soft whitespace-nowrap">
-                  <Crown className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                <div className="bg-gradient-gold text-primary-foreground px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-soft whitespace-nowrap">
+                  <Crown className="w-4 h-4" />
                   Mais Escolhido
                 </div>
               </div>
               
-              <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-4 sm:p-5 pt-6 shadow-card border-2 border-primary overflow-hidden">
+              <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-5 sm:p-6 pt-8 shadow-card border-2 border-primary overflow-hidden">
                 {/* Decorative glow */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
 
                 <div className="relative">
-                  <div className="flex items-center gap-2 mb-1 mt-2">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary fill-primary" />
-                    <h3 className="text-base sm:text-lg font-bold text-foreground">
+                  <div className="flex items-center gap-2 mb-2 mt-2">
+                    <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary fill-primary" />
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">
                       Plano Premium
                     </h3>
                   </div>
-                  <p className="text-xs text-muted-foreground mb-3">O acervo completo para você</p>
+                  <p className="text-sm text-muted-foreground mb-4">O acervo completo para você</p>
                   
                   {/* Price */}
-                  <div className="mb-4 p-2.5 sm:p-3 bg-primary/10 rounded-xl border border-primary/20">
+                  <div className="mb-5 p-3 sm:p-4 bg-primary/10 rounded-xl border border-primary/20">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-xs text-muted-foreground">R$</span>
-                      <span className="text-2xl sm:text-3xl font-bold text-gradient-gold">27</span>
-                      <span className="text-base sm:text-lg font-bold text-gradient-gold">,90</span>
+                      <span className="text-sm text-muted-foreground">R$</span>
+                      <span className="text-3xl sm:text-4xl font-bold text-gradient-gold">27</span>
+                      <span className="text-lg sm:text-xl font-bold text-gradient-gold">,90</span>
                     </div>
-                    <p className="text-xs text-muted-foreground">Acesso vitalício</p>
+                    <p className="text-sm text-muted-foreground">Acesso vitalício</p>
                   </div>
                   
-                  <ul className="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5">
+                  <ul className="space-y-3 mb-5 sm:mb-6">
                     {premiumFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary-foreground" strokeWidth={3} />
+                      <li key={index} className="flex items-start gap-2.5">
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                          <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-foreground" strokeWidth={3} />
                         </div>
-                        <span className="text-xs sm:text-sm text-foreground font-medium">{feature}</span>
+                        <span className="text-sm sm:text-base text-foreground font-medium">{feature}</span>
                       </li>
                     ))}
                     {premiumBonuses.map((bonus, index) => (
-                      <li key={`bonus-${index}`} className="flex items-start gap-2">
-                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <span className="text-xs sm:text-sm">🎁</span>
+                      <li key={`bonus-${index}`} className="flex items-start gap-2.5">
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-sm sm:text-base">🎁</span>
                         </div>
-                        <span className="text-xs sm:text-sm text-foreground font-medium">{bonus}</span>
+                        <span className="text-sm sm:text-base text-foreground font-medium">{bonus}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <Button variant="cta" size="default" className="w-full text-xs sm:text-sm shadow-soft">
-                    <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
+                  <Button variant="cta" size="lg" className="w-full text-sm sm:text-base shadow-soft">
+                    <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     Escolher Premium
                   </Button>
                 </div>
