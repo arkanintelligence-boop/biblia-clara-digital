@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Star, Gift, Sparkles, Crown } from "lucide-react";
+import { Star, Gift, Sparkles, Crown, Check } from "lucide-react";
 import { useState } from "react";
 import {
   Dialog,
@@ -14,12 +14,12 @@ const PlansSection = () => {
   const [showUpsellModal, setShowUpsellModal] = useState(false);
 
   const basicFeatures = [
-    { text: "12 Apóstolos em Mapas Mentais", emoji: "🗺️" },
-    { text: "Pentateuco – Mapa da Bíblia", emoji: "📜" },
-    { text: "Colorindo os Milagres de Jesus", emoji: "🎨" },
-    { text: "10 Mandamentos em Mapas Mentais", emoji: "📖" },
-    { text: "Caderno de Oração", emoji: "🙏" },
-    { text: "Jogo da Memória Bíblico", emoji: "🎮" },
+    "12 Apóstolos em Mapas Mentais",
+    "Pentateuco – Mapa da Bíblia",
+    "Colorindo os Milagres de Jesus",
+    "10 Mandamentos em Mapas Mentais",
+    "Caderno de Oração",
+    "Jogo da Memória Bíblico",
   ];
 
   const premiumFeatures = [
@@ -90,9 +90,9 @@ const PlansSection = () => {
                 {basicFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-xs sm:text-sm">{feature.emoji}</span>
+                      <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
                     </div>
-                    <span className="text-xs sm:text-sm text-foreground">{feature.text}</span>
+                    <span className="text-xs sm:text-sm text-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
