@@ -14,19 +14,27 @@ const PlansSection = () => {
   const [showUpsellModal, setShowUpsellModal] = useState(false);
 
   const basicFeatures = [
-    { text: "Mapas mentais dos Apóstolos", emoji: "🗺️" },
-    { text: "Mapa do Pentateuco", emoji: "📜" },
-    { text: "Milagres de Jesus para colorir", emoji: "🎨" },
-    { text: "Caderno de oração e jogos", emoji: "📖" },
+    { text: "12 Apóstolos em Mapas Mentais", emoji: "🗺️" },
+    { text: "Pentateuco – Mapa da Bíblia", emoji: "📜" },
+    { text: "Colorindo os Milagres de Jesus", emoji: "🎨" },
+    { text: "10 Mandamentos em Mapas Mentais", emoji: "📖" },
+    { text: "Caderno de Oração", emoji: "🙏" },
+    { text: "Jogo da Memória Bíblico", emoji: "🎮" },
   ];
 
   const premiumFeatures = [
     { text: "Tudo do Plano Básico", emoji: "✅" },
-    { text: "7 Sacramentos e Advento", emoji: "⛪" },
-    { text: "60 dinâmicas e gincanas", emoji: "🎯" },
-    { text: "Novo e Velho Testamento ilustrados", emoji: "📚" },
-    { text: "Quizzes e parábolas", emoji: "❓" },
-    { text: "Bônus exclusivos", emoji: "🎁" },
+    { text: "7 Sacramentos em Mapas Mentais", emoji: "⛪" },
+    { text: "Livro do Advento", emoji: "📕" },
+    { text: "60 Dinâmicas Bíblicas", emoji: "🎯" },
+    { text: "O Velho Testamento – Mapa Mental Ilustrado", emoji: "📚" },
+    { text: "O Novo Testamento – Mapa Mental Ilustrado", emoji: "📖" },
+    { text: "Discípulos de Jesus – Mapa Mental Completo", emoji: "👥" },
+    { text: "Personagens da Bíblia – Kit Completo", emoji: "🧑‍🤝‍🧑" },
+    { text: "🎁 Bônus: Dinâmicas Bíblicas", emoji: "🎁" },
+    { text: "🎁 Bônus: Gincana Bíblica", emoji: "🎁" },
+    { text: "🎁 Bônus: Quiz Bíblico", emoji: "🎁" },
+    { text: "🎁 Bônus: As Parábolas de JESUS Explicadas", emoji: "🎁" },
   ];
 
   const handleBasicClick = () => {
