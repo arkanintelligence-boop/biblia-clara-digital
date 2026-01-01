@@ -31,10 +31,10 @@ const PlansSection = () => {
     { text: "O Novo Testamento – Mapa Mental Ilustrado", emoji: "📖" },
     { text: "Discípulos de Jesus – Mapa Mental Completo", emoji: "👥" },
     { text: "Personagens da Bíblia – Kit Completo", emoji: "🧑‍🤝‍🧑" },
-    { text: "🎁 Bônus: Dinâmicas Bíblicas", emoji: "🎁" },
-    { text: "🎁 Bônus: Gincana Bíblica", emoji: "🎁" },
-    { text: "🎁 Bônus: Quiz Bíblico", emoji: "🎁" },
-    { text: "🎁 Bônus: As Parábolas de JESUS Explicadas", emoji: "🎁" },
+    { text: "Bônus: Dinâmicas Bíblicas", emoji: "🎁" },
+    { text: "Bônus: Gincana Bíblica", emoji: "🎁" },
+    { text: "Bônus: Quiz Bíblico", emoji: "🎁" },
+    { text: "Bônus: As Parábolas de JESUS Explicadas", emoji: "🎁" },
   ];
 
   const handleBasicClick = () => {
