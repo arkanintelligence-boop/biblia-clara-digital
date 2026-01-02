@@ -136,11 +136,10 @@ const FakeNotifications = () => {
 
   return (
     <div
-      className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-80 z-50 ${
-        notification.isExiting ? 'animate-slide-out-right' : 'animate-slide-in-right'
-      }`}
+      className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-72 z-50 ${notification.isExiting ? 'animate-slide-out-right' : 'animate-slide-in-right'
+        }`}
     >
-      <div className="bg-card border border-border rounded-xl shadow-card p-4 relative">
+      <div className="bg-white border md:border-2 border-gold/20 rounded-xl shadow-card p-3 relative">
         <button
           onClick={hideNotification}
           className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
@@ -148,28 +147,23 @@ const FakeNotifications = () => {
         >
           <X className="w-4 h-4" />
         </button>
-        
-        <div className="flex items-start gap-3">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${
-            isPremium ? 'bg-gradient-gold' : 'bg-primary/20'
-          }`}>
-            <Check className={`w-5 h-5 ${isPremium ? 'text-primary-foreground' : 'text-primary'}`} />
+
+        <div className="flex items-start gap-2.5">
+          <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-gold/15 border border-gold/20">
+            <Check className="w-5 h-5 text-gold" strokeWidth={3} />
           </div>
-          
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-semibold text-foreground truncate">
+
+          <div className="flex-1 min-w-0 pr-4">
+            <p className="text-[13px] font-bold text-navy truncate">
               {notification.name}
             </p>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-[11px] text-navy/60 leading-none mb-1">
               {notification.city}, {notification.state}
             </p>
-            <p className="text-xs mt-1">
-              Comprou o{" "}
-              <span className={`font-semibold ${isPremium ? 'text-gradient-gold' : 'text-primary'}`}>
-                Plano {notification.plan}
-              </span>
+            <p className="text-[11px] leading-tight">
+              Comprou o <span className="font-bold text-gold">Plano {notification.plan}</span>
             </p>
-            <p className="text-xs text-muted-foreground mt-0.5">
+            <p className="text-[10px] text-navy/40 mt-0.5">
               {notification.time}
             </p>
           </div>
