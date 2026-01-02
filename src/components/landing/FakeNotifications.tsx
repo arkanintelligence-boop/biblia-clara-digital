@@ -136,7 +136,7 @@ const FakeNotifications = () => {
 
   return (
     <div
-      className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-72 z-50 ${notification.isExiting ? 'animate-slide-out-right' : 'animate-slide-in-right'
+      className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-[310px] z-50 ${notification.isExiting ? 'animate-slide-out-right' : 'animate-slide-in-right'
         }`}
     >
       <div className="bg-white border md:border-2 border-gold/20 rounded-xl shadow-card p-3 relative">
@@ -154,16 +154,16 @@ const FakeNotifications = () => {
           </div>
 
           <div className="flex-1 min-w-0 pr-4">
-            <p className="text-[13px] font-bold text-navy truncate">
+            <p className="text-[14px] md:text-[15px] font-bold text-navy truncate leading-tight">
               {notification.name}
             </p>
-            <p className="text-[11px] text-navy/60 leading-none mb-1">
+            <p className="text-[12px] text-navy/80 leading-none mt-0.5">
               {notification.city}, {notification.state}
             </p>
-            <p className="text-[11px] leading-tight">
+            <p className="text-[12px] mt-1.5 leading-tight text-navy">
               Comprou o <span className="font-bold text-gold">Plano {notification.plan}</span>
             </p>
-            <p className="text-[10px] text-navy/40 mt-0.5">
+            <p className="text-[11px] text-navy/50 mt-1">
               {notification.time}
             </p>
           </div>
