@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, AlertTriangle } from "lucide-react";
+import { Zap } from "lucide-react";
 
 const CountdownBar = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -38,28 +38,27 @@ const CountdownBar = () => {
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5">
           <div className="flex items-center gap-2 text-primary-foreground">
-            <AlertTriangle className="w-5 h-5 text-primary animate-pulse-soft" />
-            <span className="text-sm sm:text-base font-semibold">
-              ⚠️ Oferta expira em:
+            <span className="text-lg sm:text-xl font-bold">
+              Oferta expira em:
             </span>
           </div>
           
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5">
-              <div className="bg-primary/30 backdrop-blur-sm rounded-lg px-3 py-1.5 min-w-[44px] text-center">
-                <span className="text-xl sm:text-2xl font-bold text-primary-foreground">
+              <div className="bg-primary/30 backdrop-blur-sm rounded-lg px-4 py-2 min-w-[50px] text-center">
+                <span className="text-3xl sm:text-4xl font-bold text-primary-foreground">
                   {formatNumber(timeLeft.hours)}
                 </span>
               </div>
-              <span className="text-primary-foreground font-bold text-lg">:</span>
-              <div className="bg-primary/30 backdrop-blur-sm rounded-lg px-3 py-1.5 min-w-[44px] text-center">
-                <span className="text-xl sm:text-2xl font-bold text-primary-foreground">
+              <span className="text-primary-foreground font-bold text-2xl">:</span>
+              <div className="bg-primary/30 backdrop-blur-sm rounded-lg px-4 py-2 min-w-[50px] text-center">
+                <span className="text-3xl sm:text-4xl font-bold text-primary-foreground">
                   {formatNumber(timeLeft.minutes)}
                 </span>
               </div>
-              <span className="text-primary-foreground font-bold text-lg">:</span>
-              <div className="bg-primary/30 backdrop-blur-sm rounded-lg px-3 py-1.5 min-w-[44px] text-center">
-                <span className="text-xl sm:text-2xl font-bold text-primary-foreground">
+              <span className="text-primary-foreground font-bold text-2xl">:</span>
+              <div className="bg-primary/30 backdrop-blur-sm rounded-lg px-4 py-2 min-w-[50px] text-center">
+                <span className="text-3xl sm:text-4xl font-bold text-primary-foreground">
                   {formatNumber(timeLeft.seconds)}
                 </span>
               </div>
@@ -67,8 +66,8 @@ const CountdownBar = () => {
           </div>
           
           <div className="flex items-center gap-2 text-primary-foreground/80">
-            <Clock className="w-4 h-4" />
-            <span className="text-sm">Restam poucas vagas!</span>
+            <Zap className="w-6 h-6 text-yellow-400" />
+            <span className="text-lg font-semibold">Restam poucas vagas!</span>
           </div>
         </div>
       </div>

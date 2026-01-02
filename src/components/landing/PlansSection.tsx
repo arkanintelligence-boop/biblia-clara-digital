@@ -106,53 +106,49 @@ const PlansSection = () => {
             </div>
 
             {/* Premium Plan - Wrapper for badge visibility */}
-            <div className="relative flex-1 pt-4">
+            <div className="relative flex-1 pt-8">
               {/* Badge - Outside the card for visibility */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
-                <div className="bg-gradient-gold text-primary-foreground px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-soft whitespace-nowrap">
-                  <Crown className="w-4 h-4" />
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10">
+                <div className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-base sm:text-lg font-bold flex items-center gap-2 shadow-lg whitespace-nowrap text-white" style={{ backgroundColor: '#BC852D' }}>
+                  <Crown className="w-5 h-5 sm:w-6 sm:h-6" />
                   Mais Escolhido
                 </div>
               </div>
               
-              <div className="relative bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl p-5 sm:p-6 pt-8 shadow-card border-2 border-primary overflow-hidden">
+              <div className="relative rounded-2xl p-5 sm:p-6 pt-12 shadow-card border-2 border-primary overflow-hidden" style={{ backgroundColor: '#2c4d68' }}>
                 {/* Decorative glow */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
 
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-2 mt-2">
-                    <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary fill-primary" />
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                    <Star className="w-5 h-5 sm:w-6 sm:h-6 fill-current" style={{ color: '#BC852D' }} />
+                    <h3 className="text-lg sm:text-xl font-bold text-white">
                       Plano Premium
                     </h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">O acervo completo para você</p>
+                  <p className="text-sm text-white/70 mb-4">O acervo completo para você</p>
                   
                   {/* Price */}
-                  <div className="mb-5 p-3 sm:p-4 bg-primary/10 rounded-xl border border-primary/20">
+                  <div className="mb-5 p-3 sm:p-4 bg-white/10 rounded-xl border border-white/20">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-sm text-muted-foreground">R$</span>
-                      <span className="text-3xl sm:text-4xl font-bold text-gradient-gold">27</span>
-                      <span className="text-lg sm:text-xl font-bold text-gradient-gold">,90</span>
+                      <span className="text-sm text-white">R$</span>
+                      <span className="text-3xl sm:text-4xl font-bold text-white">27</span>
+                      <span className="text-lg sm:text-xl font-bold text-white">,90</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">Acesso vitalício</p>
+                    <p className="text-sm text-white/70">Acesso vitalício</p>
                   </div>
                   
                   <ul className="space-y-3 mb-5 sm:mb-6">
                     {premiumFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2.5">
-                        <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-foreground" strokeWidth={3} />
-                        </div>
-                        <span className="text-sm sm:text-base text-foreground font-medium">{feature}</span>
+                        <Check className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 mt-0.5" style={{ color: '#BC852D' }} strokeWidth={4} />
+                        <span className="text-sm sm:text-base text-white font-medium">{feature}</span>
                       </li>
                     ))}
                     {premiumBonuses.map((bonus, index) => (
                       <li key={`bonus-${index}`} className="flex items-start gap-2.5">
-                        <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <span className="text-sm sm:text-base">🎁</span>
-                        </div>
-                        <span className="text-sm sm:text-base text-foreground font-medium">{bonus}</span>
+                        <span className="text-xl sm:text-2xl flex-shrink-0 mt-0.5">🎁</span>
+                        <span className="text-sm sm:text-base text-white font-medium">{bonus}</span>
                       </li>
                     ))}
                   </ul>

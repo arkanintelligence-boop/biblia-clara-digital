@@ -30,8 +30,8 @@ const TransformationSection = () => {
                 key={index}
                 className={`flex items-center gap-2 bg-card rounded-xl p-3 shadow-card border border-border/50 ${index === transformations.length - 1 ? 'col-span-2' : ''}`}
               >
-                <div className="w-8 h-8 rounded-lg bg-gradient-gold flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-4 h-4 text-primary-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-gold flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-primary-foreground" strokeWidth={2.5} />
                 </div>
                 <span className="font-semibold text-foreground text-xs">{item.text}</span>
               </div>

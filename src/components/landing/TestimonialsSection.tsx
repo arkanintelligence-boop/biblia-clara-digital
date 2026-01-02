@@ -1,4 +1,7 @@
 import { Star, Quote } from "lucide-react";
+import mariaClara from "../../assets/maria-clara-testimonial.png";
+import anaPaula from "../../assets/ana-paula-testimonial.png";
+import juliana from "../../assets/juliana-testimonial.png";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -7,18 +10,21 @@ const TestimonialsSection = () => {
       role: "Mãe e Catequista",
       content: "O material é maravilhoso! Minhas aulas ficaram muito mais dinâmicas e as crianças adoram.",
       rating: 5,
+      image: mariaClara
     },
     {
       name: "Ana Paula R.",
       role: "Líder de Célula",
       content: "Eu passava horas preparando estudos. Agora, em minutos, tenho tudo pronto. Recomendo!",
       rating: 5,
+      image: anaPaula
     },
     {
       name: "Juliana M.",
       role: "Professora de Escola Dominical",
       content: "A organização do material é impecável. Finalmente algo completo e bonito. Vale cada centavo!",
       rating: 5,
+      image: juliana
     },
   ];
 
@@ -62,11 +68,13 @@ const TestimonialsSection = () => {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-sm font-bold text-primary">
-                    {testimonial.name.charAt(0)}
-                  </span>
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 rounded-full overflow-hidden shadow-soft border-2 border-gradient-gold">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <p className="font-bold text-sm text-foreground">{testimonial.name}</p>

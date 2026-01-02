@@ -7,8 +7,8 @@ const GuaranteeSection = () => {
         <div className="max-w-sm mx-auto">
           <div className="bg-card rounded-2xl p-6 shadow-card border border-primary/20 text-center">
             {/* Icon */}
-            <div className="w-14 h-14 rounded-xl bg-gradient-gold mx-auto mb-5 flex items-center justify-center shadow-soft">
-              <ShieldCheck className="w-7 h-7 text-primary-foreground" />
+            <div className="w-20 h-20 rounded-3xl bg-gradient-gold mx-auto mb-5 flex items-center justify-center shadow-soft">
+              <ShieldCheck className="w-12 h-12 text-primary-foreground" strokeWidth={2.5} />
             </div>
 
             {/* Title */}
@@ -24,9 +24,9 @@ const GuaranteeSection = () => {
             </p>
 
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-primary" />
-              <span className="text-xs font-semibold text-foreground">Compra 100% segura</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2">
+              <ShieldCheck className="w-4 h-4 text-primary" />
+              <span className="text-sm font-semibold text-foreground">Compra 100% segura</span>
             </div>
           </div>
         </div>

@@ -42,8 +42,8 @@ const PainSection = () => {
               key={index}
               className="bg-card rounded-xl p-4 shadow-card border border-border/50 flex items-start gap-3"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <pain.icon className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <pain.icon className="w-7 h-7 text-primary" strokeWidth={2.5} />
               </div>
               <div>
                 <h3 className="text-sm font-bold text-foreground mb-0.5">

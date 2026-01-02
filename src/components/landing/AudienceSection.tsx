@@ -30,8 +30,8 @@ const AudienceSection = () => {
                 key={index}
                 className="flex items-center gap-3 bg-card rounded-xl p-3.5 shadow-card border border-border/50"
               >
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <audience.icon className="w-4.5 h-4.5 text-primary" />
+                <div className="w-11 h-11 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <audience.icon className="w-6 h-6 text-primary" strokeWidth={2.5} />
                 </div>
                 <span className="font-semibold text-sm text-foreground">{audience.label}</span>
               </div>
