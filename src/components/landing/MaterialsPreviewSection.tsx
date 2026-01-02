@@ -1,3 +1,4 @@
+import Autoplay from "embla-carousel-autoplay";
 import { Card } from "@/components/ui/card";
 import {
     Carousel,
@@ -49,6 +50,12 @@ const MaterialsPreviewSection = () => {
                             align: "center",
                             loop: true,
                         }}
+                        plugins={[
+                            Autoplay({
+                                delay: 2500,
+                                stopOnInteraction: false,
+                            }),
+                        ]}
                         className="w-full"
                     >
                         <CarouselContent className="-ml-2 md:-ml-4">

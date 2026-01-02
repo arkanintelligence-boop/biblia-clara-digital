@@ -149,21 +149,21 @@ const FakeNotifications = () => {
         </button>
 
         <div className="flex items-start gap-2.5">
-          <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-gold/15 border border-gold/20">
-            <Check className="w-5 h-5 text-gold" strokeWidth={3} />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-gold shadow-sm">
+            <Check className="w-6 h-6 text-white" strokeWidth={4} />
           </div>
 
           <div className="flex-1 min-w-0 pr-4">
-            <p className="text-[14px] md:text-[15px] font-bold text-navy truncate leading-tight">
+            <p className="text-[15px] md:text-[16px] font-bold text-navy truncate leading-tight">
               {notification.name}
             </p>
-            <p className="text-[12px] text-navy/80 leading-none mt-0.5">
+            <p className="text-[12px] text-navy font-bold leading-none mt-1">
               {notification.city}, {notification.state}
             </p>
-            <p className="text-[12px] mt-1.5 leading-tight text-navy">
-              Comprou o <span className="font-bold text-gold">Plano {notification.plan}</span>
+            <p className="text-[13px] mt-1.5 leading-tight text-navy font-medium">
+              Comprou o <span className="font-extrabold text-[#b38a3d]">Plano {notification.plan}</span>
             </p>
-            <p className="text-[11px] text-navy/50 mt-1">
+            <p className="text-[11px] text-navy font-semibold mt-1.5 opacity-70">
               {notification.time}
             </p>
           </div>
