@@ -40,18 +40,22 @@ const PlansSection = () => {
     "Bônus: As Parábolas de JESUS Explicadas",
   ];
 
+  const handlePremiumClick = () => {
+    window.location.href = "https://www.ggcheckout.com/checkout/v4/hw7njFyTHT5hjvCnM655";
+  };
+
   const handleBasicClick = () => {
     setShowUpsellModal(true);
   };
 
   const handleAcceptPremium = () => {
     setShowUpsellModal(false);
-    window.open("#premium-checkout", "_blank");
+    window.location.href = "https://www.ggcheckout.com/checkout/v2/BHGz6xz2nquc1nSlfpyI";
   };
 
   const handleDeclineUpsell = () => {
     setShowUpsellModal(false);
-    window.open("#basic-checkout", "_blank");
+    window.location.href = "https://www.ggcheckout.com/checkout/v2/1ZtnQRslCbqbyhanBJyx";
   };
 
   return (
@@ -78,7 +82,7 @@ const PlansSection = () => {
                 Plano Básico
               </h3>
               <p className="text-sm text-muted-foreground mb-4">Para começar sua jornada</p>
-              
+
               {/* Price */}
               <div className="mb-5 p-3 sm:p-4 bg-secondary rounded-xl">
                 <div className="flex items-baseline gap-1">
@@ -88,7 +92,7 @@ const PlansSection = () => {
                 </div>
                 <p className="text-sm text-muted-foreground">Acesso vitalício</p>
               </div>
-              
+
               <ul className="space-y-3 mb-5 sm:mb-6">
                 {basicFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2.5">
@@ -114,7 +118,7 @@ const PlansSection = () => {
                   Mais Escolhido
                 </div>
               </div>
-              
+
               <div className="relative rounded-2xl p-5 sm:p-6 pt-12 shadow-card border-2 border-primary overflow-hidden" style={{ backgroundColor: '#2c4d68' }}>
                 {/* Decorative glow */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
@@ -127,7 +131,7 @@ const PlansSection = () => {
                     </h3>
                   </div>
                   <p className="text-sm text-white/70 mb-4">O acervo completo para você</p>
-                  
+
                   {/* Price */}
                   <div className="mb-5 p-3 sm:p-4 bg-white/10 rounded-xl border border-white/20">
                     <div className="flex items-baseline gap-1">
@@ -137,7 +141,7 @@ const PlansSection = () => {
                     </div>
                     <p className="text-sm text-white/70">Acesso vitalício</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-5 sm:mb-6">
                     {premiumFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2.5">
@@ -153,7 +157,7 @@ const PlansSection = () => {
                     ))}
                   </ul>
 
-                  <Button variant="cta" size="lg" className="w-full text-sm sm:text-base shadow-soft">
+                  <Button variant="cta" size="lg" className="w-full text-sm sm:text-base shadow-soft" onClick={handlePremiumClick}>
                     <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     Escolher Premium
                   </Button>
@@ -181,7 +185,7 @@ const PlansSection = () => {
               </DialogDescription>
             </DialogHeader>
           </div>
-          
+
           <div className="p-4 sm:p-5">
             <div className="text-center mb-3 sm:mb-4">
               <p className="text-xs sm:text-sm text-foreground mb-2 sm:mb-3">
@@ -209,18 +213,18 @@ const PlansSection = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Button 
-                variant="cta" 
-                size="default" 
+              <Button
+                variant="cta"
+                size="default"
                 className="w-full text-xs sm:text-sm animate-pulse-soft shadow-soft py-2.5 sm:py-3"
                 onClick={handleAcceptPremium}
               >
                 <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                 Sim, quero o Premium por R$ 17,90
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 className="w-full text-muted-foreground hover:text-foreground text-xs py-2"
                 onClick={handleDeclineUpsell}
               >
